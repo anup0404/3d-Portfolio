@@ -3,23 +3,28 @@ import { projects } from "../constants";
 import { Link } from "react-router-dom";
 import { arrow } from "../assets/icons";
 import CTA from "../Components/CTA";
+import { currency } from "../assets/icons";
+import Card from "./Card";
 
 function Projects() {
   return (
     <section className="max-container">
       <h1 className="head-text">
-        Hello, I'm My
+        My{"    "}
         <span className="blue-gradient_text font-semibold drop-shadow">
           Projects
         </span>
       </h1>
       <div className="text-slate-500 mt-5 flex flex-col gap-3">
         <p>
-          I've embarked on numerous projects throughout the years, but these are
-          the ones I hold closest to my heart. Many of them are open-source, so
-          if you come across something that piques your interest, feel free to
-          explore the codebase and contribute your ideas for further
-          enhancements. Your collaboration is highly valued!
+          Among the numerous projects I've undertaken, a select few hold a
+          special place in my heart. These endeavors, marked by passion and
+          collaboration, stand out as more than tasks—they represent shared
+          achievements and profound growth. Your valued collaboration has been
+          pivotal in turning challenges into successes. Together, we've woven a
+          story of innovation, dedication, and meaningful creation. Explore
+          these projects, a testament to our joint pursuit of excellence and the
+          joy found in crafting something truly remarkable.
         </p>
       </div>
       <div className="flex flex-wrap my-20 gap-16">
@@ -60,6 +65,15 @@ function Projects() {
         ))}
       </div>
       <hr className="border-slate-200" />
+      <h1 className=" mt-10 mb-10 subhead-text">
+        My {" "}
+        <span className="blue-gradient_text font-semibold drop-shadow">
+          Certificates & Certifications
+        </span>
+      </h1>
+
+      <Card/>
+      <hr className="border-slate-200 m-10" />
       <CTA />
     </section>
   );

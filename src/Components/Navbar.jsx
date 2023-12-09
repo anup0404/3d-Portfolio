@@ -17,7 +17,7 @@ function Navbar() {
             isActive ? "text-blue-500" : "text-black"
           }
         >
-          About
+          📖 About
         </NavLink>
         <NavLink
           to="/project"
@@ -25,8 +25,16 @@ function Navbar() {
             isActive ? "text-blue-500" : "text-black"
           }
         >
-          Projects
+          📓 Projects
         </NavLink>
+        
+        <a
+          href="https://drive.google.com/u/0/uc?id=1KN9RJVyXSTmhR3NbnFSPEY7A6RUj3V1c&export=download"
+          download
+        >
+          👨‍🎓 Resume
+        </a>
+      
       </nav>
     </header>
   );
