@@ -27,14 +27,6 @@ function Navbar() {
         >
           📓 Projects
         </NavLink>
-        
-        <a
-          href="https://drive.google.com/u/0/uc?id=1KN9RJVyXSTmhR3NbnFSPEY7A6RUj3V1c&export=download"
-          download
-        >
-          👨‍🎓 Resume
-        </a>
-      
       </nav>
     </header>
   );

@@ -8,6 +8,30 @@ import "react-vertical-timeline-component/style.min.css";
 import CTA from "../Components/CTA";
 import { NavLink } from "react-router-dom";
 
+const data = [
+  {
+    id: "1",
+    degree: "B.tech in Computer Science",
+    school: "Lovely Professional University |Phagwara, IN",
+    date: "Apr 2020 - Present",
+    marks: "CGPA 7.40",
+  },
+  {
+    id: "2",
+    degree: "Higher Secondary School (10+2)",
+    school: "Jeewan Public School|Motihari, IN",
+    date: "June 2018 - March-2019",
+    marks: "Marks 76.02%",
+  },
+  {
+    id: "3",
+    degree: "Secondary School",
+    school: "Galaxy Residential Public School |Chapara, IN",
+    date: "March 2017 -April 2018",
+    marks: "CGPA 10",
+  },
+];
+
 function About() {
   return (
     <section className="max-container">
@@ -41,6 +65,14 @@ function About() {
               </div>
             </NavLink>
           ))}
+          <button className="border-1 shadow-lg rounded-full p-2">
+            <a
+              href="https://drive.google.com/u/0/uc?id=1KN9RJVyXSTmhR3NbnFSPEY7A6RUj3V1c&export=download"
+              download
+            >
+              👨‍🎓 Resume
+            </a>
+          </button>
         </div>
       </div>
       <div className=" py-10 flex flex-col">
@@ -194,57 +226,24 @@ function About() {
           Education
         </span>
       </h1>
+      {data.map((data) => (
+        <div key={data.id}>
+          <div className="border-b border-gray/20  mb-[20px] flex gap-7 ">
+            <div className="max-w-[476px]">
+              <h4 className="text-[20px] tracking-wider font-primary font-semibold mb-6">
+                {data.degree}
+              </h4>
+              <p className="font-secondary leading-tight">{data.school}</p>
+              <p className="text-[10px] bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text  text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+                {data.marks}
+              </p>
+            </div>
+            <div>{data.date}</div>
+          </div>
+        </div>
+      ))}
+      <div></div>
 
-      <div>
-        <div className="border-b border-gray/20 h-[110px] mb-[20px] flex gap-7 ">
-          <div className="max-w-[476px]">
-            <h4 className="text-[20px] tracking-wider font-primary font-semibold mb-6">
-              B.Tech. in Computer Science
-            </h4>
-            <p className="font-secondary leading-tight">
-              Lovely Professional University |Phagwara, IN
-            </p>
-            <p className="text-[12px] bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text  text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
-              CGPA 7.40
-            </p>
-          </div>
-          <div>Apr 2020 - Present</div>
-        </div>
-      </div>
-      <div>
-        <div className="border-b  gap-7 border-/20 h-[110px] mb-[20px] flex">
-          <div className="max-w-[476px]">
-            <h4 className="text-[20px] tracking-wider font-primary font-semibold mb-6">
-              Higher Secondary School (10+2)
-            </h4>
-            <p className="font-secondary leading-tight">
-              Jeewan Public School|Motihari, IN
-            </p>
-            <p className="text-[12px] bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text  text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
-              Marks 76.02%
-            </p>
-          </div>
-          <div>June 2018 - March-2019</div>
-        </div>
-      </div>
-      <div>
-        <div className="border-b gap-7  border-gray/20 h-[110px] mb-[20px] flex">
-          <div className="max-w-[476px]">
-            <h4 className="text-[20px] tracking-wider font-primary font-semibold mb-6">
-              Secondary School
-            </h4>
-            <p className="font-secondary leading-tight">
-              Galaxy Residential Public School |Chapara, IN
-            </p>
-            <p className="text-[12px] bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text  text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
-              CGPA 10
-            </p>
-          </div>
-          <div>March 2017 -April 2018</div>
-        </div>
-      </div>
-
-    
       <CTA />
     </section>
   );
