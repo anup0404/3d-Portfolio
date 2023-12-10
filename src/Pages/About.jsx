@@ -67,10 +67,9 @@ function About() {
           ))}
           <button className="border-1 shadow-lg rounded-full p-2">
             <a
-              href="https://drive.google.com/u/0/uc?id=1KN9RJVyXSTmhR3NbnFSPEY7A6RUj3V1c&export=download"
+              href="https://drive.google.com/uc?id=1K8C9WzqmtT-89yy-MIRkFvr_LfE2E44w&export=download"
               download
-            >
-              👨‍🎓 Resume
+            >👨‍🎓 Resume
             </a>
           </button>
         </div>
